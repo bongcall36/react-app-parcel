@@ -1,0 +1,34 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/charts": "^1.4.2",
+    "@ant-design/icons": "^4.8.0",
+    "@ant-design/plots": "^1.2.2",
+    "antd": "^5.0.2",
+    "html-to-image": "^1.10.8",
+    "immutability-helper": "^3.1.1",
+    "jspdf": "^2.5.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-common-parcel": "file:.yalc/react-common-parcel",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "use-gauge": "^0.5.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.0",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "rimraf dist && parcel build public/index.html --dist-dir dist"
+  },
+  "staticFiles": {
+    "staticPath": "src/sampledata/comment",
+    "staticOutPath": "sampledata"
+  }
+}
