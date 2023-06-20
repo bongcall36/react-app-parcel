@@ -1,11 +1,13 @@
 import React, {useRef, useState} from 'react';
 import './App.css';
-import { Button, Col, Row, FloatButton, Drawer, Typography,  Space, Tabs} from 'antd';
+import { Button, Col, Row, FloatButton, Drawer, Typography,  Space, Tabs, ConfigProvider} from 'antd';
+import koKR from 'antd/lib/locale/ko_KR';
 import { SettingOutlined, DownSquareOutlined } from '@ant-design/icons';
 import { UiCards, UiProgressCharts, UiScoreCard, UiScoreBoards, UiCardColumnLinesChart, UiCardLinesChart, UiCardProgressLine, ChartsScoreChart, 
-       ChartsScoreHeatMap, UiPdfButton, Comments, AntdTheme, GridComponents } from 'react-common-parcel'
+       ChartsScoreHeatMap, UiPdfButton, Comments, AntdTheme, GridComponents, AntProTableCharts} from 'react-common-parcel'
 import { stackedcolumnmutilinedata,  linesdata, Errorsdata} from './sampledata/chart/data'
 import { componentList } from './sampledata/gridcomponents/componentlist'
+import { tableListDataSource, chartAlias, defaultChartData} from './sampledata/protables/tabledata'
 
 import { appColor } from './color'
 
@@ -115,12 +117,17 @@ export function App() {
             <TabPane tab='screen2' key='2' style={{margin:0}}>
                 <GridComponents componentList={componentList} modalWidth={300}/>
             </TabPane>
-            </Tabs>
-            <FloatButton type='primary' onClick={showDrawer} />
-            <Drawer title="Basic Drawer" placement="right" width={800} onClose={onClose} open={open}>
-                <Comments dataurl={'./sampledata/commentdata.json'}/>
-            </Drawer>            
-        </AntdTheme>    
+            <TabPane tab='screen3' key='3' style={{margin:0}}>
+                <ConfigProvider locale={koKR}>
+                    <AntProTableCharts data={tableListDataSource} defaultChart={defaultChartData} chartAlias={chartAlias}/>
+                </ConfigProvider>  
+            </TabPane>            
+        </Tabs>
+        <FloatButton type='primary' onClick={showDrawer} />
+        <Drawer title="Basic Drawer" placement="right" width={800} onClose={onClose} open={open}>
+            <Comments dataurl={'./sampledata/commentdata.json'}/>
+        </Drawer>            
+    </AntdTheme>    
         </>      
     )
 }
