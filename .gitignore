@@ -24,4 +24,3 @@
 dist/
 node_modules/
 /yalc.lock
-/yarn.lock
