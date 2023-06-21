@@ -2,7 +2,7 @@ export const tableListDataSource = [];
 
 const creators = ['홍길동', '이이', '이황', '정약용', '정조'];
 
-const statusMap = {
+export const statusMap = {
   0: {
     color: 'blue',
     text: '진행중',

@@ -7,7 +7,7 @@ import { UiCards, UiProgressCharts, UiScoreCard, UiScoreBoards, UiCardColumnLine
        ChartsScoreHeatMap, UiPdfButton, Comments, AntdTheme, GridComponents, AntProTableCharts} from 'react-common-parcel'
 import { stackedcolumnmutilinedata,  linesdata, Errorsdata} from './sampledata/chart/data'
 import { componentList } from './sampledata/gridcomponents/componentlist'
-import { tableListDataSource, chartAlias, defaultChartData} from './sampledata/protables/tabledata'
+import { tableListDataSource, chartAlias, defaultChartData, statusMap} from './sampledata/protables/tabledata'
 
 import { appColor } from './color'
 
@@ -119,7 +119,7 @@ export function App() {
             </TabPane>
             <TabPane tab='screen3' key='3' style={{margin:0}}>
                 <ConfigProvider locale={koKR}>
-                    <AntProTableCharts data={tableListDataSource} defaultChart={defaultChartData} chartAlias={chartAlias}/>
+                    <AntProTableCharts data={tableListDataSource} defaultChart={defaultChartData} chartAlias={chartAlias} btoolbar={true} statusMap={statusMap}/>
                 </ConfigProvider>  
             </TabPane>            
         </Tabs>
