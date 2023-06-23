@@ -1,9 +1,12 @@
 export const tableListDataSource = [];
 export const expandedRowDataSource = [];
+export let defaultChartData={};
+export let chartAlias={};
+export let statusMap={};
 
 const creators = ['홍길동', '이이', '이황', '정약용', '정조'];
 
-export const statusMap = {
+statusMap = {
   0: {
     color: 'blue',
     text: '진행중',
@@ -48,7 +51,7 @@ for (let i = 0; i < 3; i += 1) {
   });
 }
 
-export const chartAlias = {
+chartAlias = {
   key: {
       alias: '',
   },
@@ -75,7 +78,7 @@ export const chartAlias = {
   },            
 };
 
-export const defaultChartData = {
+defaultChartData = {
     chartType: 'Column',
     chartX: 'name1',
     chartY: 'containers'
