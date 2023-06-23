@@ -1,4 +1,5 @@
 export const tableListDataSource = [];
+export const expandedRowDataSource = [];
 
 const creators = ['홍길동', '이이', '이황', '정약용', '정조'];
 
@@ -35,6 +36,15 @@ for (let i = 0; i < 5; i += 1) {
     status: statusMap[Math.floor(Math.random() * 10) % 5],
     createdAt: Date.now() - Math.floor(Math.random() * 100000),
     fixed: 'fixed',
+  });
+}
+
+for (let i = 0; i < 3; i += 1) {
+  expandedRowDataSource.push({
+    key: i,
+    date: '2014-12-24 23:12:00',
+    name: 'This is production name',
+    upgradeNum: 'Upgraded: 56',
   });
 }
 
