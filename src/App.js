@@ -150,6 +150,7 @@ const selectionType = 'checkbox'
 const bAutoColums = true
 const btoolbar = true
 const expandable = true
+const bchartbar = true
 
 const OnButtonClick = (e) => {  
     console.log("click")
@@ -247,6 +248,7 @@ export function App() {
                     defaultChart={defaultChartData} 
                     chartAlias={chartAlias} 
                     btoolbar={btoolbar} 
+                    bchartbar={bchartbar}                    
                     statusMap={statusMap}
                     columnsStateMap={columnsStateMap}
                     expandable={expandable}
